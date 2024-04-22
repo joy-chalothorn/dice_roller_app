@@ -1,8 +1,14 @@
+import 'package:dice_roller_app/dice_roller.dart';
 import 'package:flutter/material.dart';
 
-class CustomGradient extends StatelessWidget {
-  const CustomGradient({super.key});
+class GradientContainer extends StatefulWidget {
+  const GradientContainer({super.key});
 
+  @override
+  State<GradientContainer> createState() => _GradientContainerState();
+}
+
+class _GradientContainerState extends State<GradientContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,6 +23,9 @@ class CustomGradient extends StatelessWidget {
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
         ),
+      ),
+      child: const Center(
+        child: DiceRoller(),
       ),
     );
   }
